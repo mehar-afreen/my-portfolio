@@ -1,0 +1,432 @@
+<!doctype html>
+<html land="en-in">
+    <head>
+        <title>Shopper Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewpost" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <style>
+            header
+            {
+                font-size: 25px;
+                font-family: Arial;
+                display: flex;
+                justify-content: space-around;
+                padding: 25px;
+            }
+            nav span
+            {
+                margin-right:15px;
+            }
+            .banner-title
+            {
+                font-size:35px;
+                font-weight: bold;
+            }
+            .count-cart
+            {
+                background-color: red;
+                display: inline-block;
+                width: 30px;
+                border-radius: 30px;
+                color: white;
+                text-align: center;
+                font-size: 15px;
+                padding-top:3px;
+                padding-bottom:3px;
+            }
+            article
+            {
+                background-color: black;
+                text-align: center;
+                padding: 25px;
+                color: white;
+            }
+            .bi-lightning-charge-fill
+            {
+                color: gold;
+                font-size: 18px;
+            }
+            section {
+                height: 2500px;
+            }
+            footer
+            {
+                display: grid;
+                grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+                background-color: black;
+                font-family: Arial;
+                color: white;
+                padding: 50px;
+                height: 35vh;
+                margin-top:-200px;
+            }
+            .shopper-heading
+            {
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .footer-info-title
+            {
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+            .footer-info-title ~ span
+            {
+                display: block;
+                margin-bottom: 10px;
+            }
+            aside span
+            {
+                margin-right: 10px;
+            }
+            main {
+                display:grid;
+                grid-template-columns: 4fr 4fr 4fr;
+                margin-top: 15px;
+            }
+            .women-fashion {
+                background-image:url("./images/women-fashion.jpg");
+                height: 500px;
+                background-size: cover;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.6;
+
+            }
+            .men-fashion {
+                background-image: url("public/images/men-fashion.jpg");
+                height: 500px;
+                background-size: cover;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.6;
+            }
+            .kid-fashion {
+                background-image: url("public/images/kids-fashion.jpg");
+                height: 500px;
+                background-size: cover;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0.6;
+            }
+            .women-fashion:hover {
+                opacity: 0.9;
+            }
+            .men-fashion:hover {
+                opacity: 0.9;
+            }
+            .kid-fashion:hover {
+                opacity: 0.9;
+            }
+            .card-title {
+                font-size:40px;
+                font-weight: bold;
+                color: white;
+                text-shadow: 3px 3px 3px black;
+            }
+            .card-button {
+                font-size: 18px;
+                color:black;
+                padding: 8px;
+                width: 180px;
+                border:none;
+                background-color: white;
+                height: 50px;
+                margin-top: 200px;
+            }
+            .free-cards {
+                display: flex;
+            }
+            .discount-cards {
+                width: 300px;
+            }
+            .bi-truck {
+                margin-right:10px;
+                color:red;
+            }
+            .offers-card {
+                border: none;
+                display: flex;
+                justify-content: space-between;
+                margin:auto;
+                margin-left: 100px;
+                margin-right: 100px;
+                padding: 15px;
+                border-bottom:1px solid lightgray;
+                font-family:Arial;
+            }
+            .sub-para {
+                padding-left:35px;
+                font-size:14px;
+                color:gray;
+            }
+            .free-shipping-space {
+                padding-left: 10px;
+                font-size:14px;
+                font-weight: 600;
+            }
+            .bi-arrow-left-right {
+                color:red;
+                padding-right:8px;
+            }
+            .bi-lock {
+                color:red;
+                padding-right:8px;
+            }
+            .bi-tag {
+                color:red;
+                padding-right:8px;
+            }
+            * {
+                font-family:Arial;
+            }
+            .new-collection-card {
+                text-align:center;
+                margin:50px 300px 50px 300px;
+            }
+            .new-collection-para {
+                font-size:8px;
+                color:gray;
+            }
+            .new-collection-para2 {
+                font-size:10px;
+                color:gray;
+                line-height:20px;
+            }
+            .collection {
+                display:grid;
+                grid-template-columns:4fr 8fr;
+                grid-gap:20px;
+                margin-left:100px;
+                margin-right:100px;
+                color:white;
+            }
+            .bag-collection {
+                background-image:url("../public/images/women-bag.jpg");
+                background-size:cover;
+                height:300px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .printed-men-collection {
+                background-image:url("../public/images/men-shirt.jpg");
+                background-size:cover;
+                height:300px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                position:relative;
+            }
+            .shop-now {
+                border:none;
+                background-color:transparent;
+                font-size:10px;
+                color:white;
+                font-weight:bold;
+            }
+            .off-30-percent {
+                background-color:rgb(255,90,90);
+                height:70px;
+                width:70px;
+                text-align:center;
+                border-radius:70px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                font-weight:bold;
+                position:absolute;
+                top:10px;
+                right:10px;
+            }
+            /*.basic-women-dresses {
+                background-image:url("../public/images/basic-women-dress.jpg");
+                background-size:cover
+            }*/
+            .collection-1 {
+                display:grid;
+                grid-template-columns:8fr 4fr;
+                grid-gap:20px;
+                margin-top:20px;
+                margin-left:100px;
+                margin-right:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                <span class="banner-title">Shopper</span>
+            </div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Pages</span>
+                    <span>Blog</span>
+                    <span>Docs</span>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <span class="bi bi-search"></span>
+                    <span class="bi bi-person"></span>
+                    <span class="bi bi-heart"></span>
+                    <span class="bi bi-cart3"><span class="count-cart">2</span></span>
+                </nav>
+            </div>
+        </header>
+        <article>
+            <span class="bi bi-lightning-charge-fill"></span>
+            <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+            <span class="bi bi-lightning-charge-fill"></span>
+        </article>
+        <section>
+            <main>
+                <div class="women-fashion">
+                    <div class="card-fashion">
+                        <div class="card-title">Women</div>
+                        <div>
+                            <button class="card-button">Shop Women<span class="bi bi-arrow-right ps-1"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="men-fashion">
+                    <div class="card-fashion">
+                        <div class="card-title">Men</div>
+                        <div>
+                            <button class="card-button">Shop Men<span class="bi bi-arrow-right ps-1"></span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="kid-fashion">
+                    <div class="card-fashion">
+                        <div class="card-title">Kids</div>
+                        <div>
+                            <button class="card-button">shop Kids<span class="bi bi-arrow-right ps-1"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="offers-card">
+                <div class="discount-cards">
+                    <div class="free-cards">
+                        <div class="bi bi-truck"></div>
+                        <div class="free-shipping-space">FREE SHIPPING</div>
+                    </div>
+                    <p class="sub-para">From all orders over $100</p>
+                </div>
+                <div class="discount-cards">
+                    <div class="free-cards">
+                        <div class="bi bi-arrow-left-right"></div>
+                        <div class="free-shipping-space">FREE RETURNS</div>
+                    </div>
+                    <p class="sub-para">Return money within 30 days</p>
+                </div>
+                <div class="discount-cards">
+                    <div class="free-cards">
+                        <div class="bi bi-lock"></div>
+                        <div class="free-shipping-space">SECURE SHOPPING</div>
+                    </div>
+                    <p class="sub-para">You're in safe hands</p>
+                </div>
+                <div class="discount-cards">
+                    <div class="free-cards">
+                        <div class="bi bi-tag"></div>
+                        <div class="free-shipping-space">OVER 10,000 STYLES</div>
+                    </div>
+                    <p class="sub-para">We have everything you need</p>
+                </div>
+            </div>
+
+            <div class="new-collection-card">
+                <p class="new-collection-para">NEW COLLECTION</p>
+                <h2>Best Picks 2019</h2>
+                <p class="new-collection-para2">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought very green.</p>
+            </div>
+
+            <div class="collection">
+                <div class="bag-collection">
+                    <div style="color:white;">
+                        <p><b>Bag Collection</b></p>
+                        <button class="shop-now">Shop Now <span class="bi bi-arrow-right" style="padding-left:5px;"></span></button>
+                    </div>
+                </div>
+                <div class="printed-men-collection">
+                    <div>
+                        <p><b>Printed Men collection</b></p>
+                        <button class="shop-now">Snop now <span class="bi bi-arrow-right" style="padding-left:5px;"></span></button>
+                    </div>
+                    <div class="off-30-percent">
+                        <div>
+                            <p style="font-size:10px;">Save</p>
+                            <span>30%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="collection-1 text-light fw-bold">
+                <div style="background-image:url('../public/images/basic-women-dress.jpg');" class="bag-collection">
+                    <div>
+                        <p><b>Basic women's dresses</b></p>
+                        <button class="shop-now fw-bold">Snop now <span class="bi bi-arrow-right ps-1"></span></button>
+                    </div>
+                </div>
+                <div style="background-image:url('../public/images/sweat-shirt.jpg');" class="bag-collection">
+                    <div>
+                        <p><b>Sweat Shirts</b></p>
+                        <button class="shop-now fw-bold">Snop now <span class="bi bi-arrow-right ps-1"></span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <div class="shopper-heading">Shopper</div>
+                <aside>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+            </div>
+            <div>
+                <div class="footer-info-title">SUPPORT</div>
+                <span>Contact Us</span>
+                <span>FAQs</span>
+                <span>Size Guide</span>
+                <span>Shipping & Returns</span>
+            </div>
+            <div>
+                <div class="footer-info-title">SHOP</div>
+                <span>Men's Shopping</span>
+                <span>Women's Shopping</span>
+                <span>Kids' Shopping</span>
+                <span>Discounts</span>
+            </div>
+            <div>
+               <div class="footer-info-title">COMPANY</div>
+               <span>Our Story</span>
+               <span>Careers</span>
+               <span>Terms & Conditions</span>
+               <span>Privacy & Cookie policy</span>
+            </div>
+            <div>
+                <div class="footer-info-title">CONTACT</div>
+                <span>1-202-555-0105</span>
+                <span>1-202-555-0106</span>
+                <span>help@shopper.com</span>
+            </div>
+        </footer>
+    </body>

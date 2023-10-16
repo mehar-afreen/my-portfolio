@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You tube</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            font-size:40px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+
+        }
+        .bi-justify {
+            padding-right: 10px;
+        }
+        .search-area {
+            display: flex;
+        }
+        .search-bar {
+            border:1px solid black;
+            width: 450px;
+            height: 20px;
+            font-size:20px;
+            padding: 10px;
+            border-radius: 35px;
+            color: gray;
+        }
+        .bi-search {
+            padding-left: 350px;
+            font-size:18px;
+        }
+        .bi-mic-fill {
+            font-size: 20px;
+           display: inline-block;
+           padding-bottom: 10px;
+        }
+        .mic {
+            background-color: rgba(211, 211, 211, 0.695);
+            width: 35px;
+            border-radius: 30px;
+            padding-left:12px;
+            margin-left:10px;
+
+        }
+        .icons-card {
+            font-size: 25px;
+        }
+        .icons-card span {
+            margin-left:10px;
+        }
+        sup {
+            background-color: brown;
+            color: white;
+            font-size: 10px;
+            display:inline-block;
+            width: 20px;
+            text-align: center;
+            height: 15px;
+            padding-top:1px;
+            padding-bottom:-3px;
+            border-radius: 10px;
+        }
+        .mail {
+            display: inline-block;
+            width: 50px;
+            background-color: rgb(248, 95, 6);
+            color: white;
+            text-align: center;
+            border-radius: 40px;
+            height: 35px;
+        }
+        section {
+            display:grid;
+            grid-template-columns: 2fr 10fr;
+            grid-gap: 20px;
+        }
+        .space-left {
+            padding-left: 30px;
+        }
+        nav {
+            padding-left: 20px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        nav div {
+            margin-bottom: 20px;
+            
+        }
+        /*nav div:hover {
+            background-color: rgba(211, 211, 211, 0.71);
+            width: 200px;
+            border-radius: 25px;
+            padding: 10px;
+            height: 40px;
+            
+        }*/
+        a {
+            text-decoration: none;
+        }
+        a:visited {
+            color: black;
+        }
+        main {
+            margin-top:15px;
+        }
+        body {
+            font-family: Arial;
+        }
+        .sub-title {
+            color: gray;
+            font-weight: bold;
+        }
+        .subscriber {
+            font-weight: normal;
+        }
+        .content {
+            color: gray;
+        }
+        .subscribe-card {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 120px;
+            height: 30px;
+            border-radius: 25px;
+            border:none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+       .bi-bell {
+        padding-right: 5px;
+       }
+       .bi-chevron-down {
+        padding-left: 5px;
+       }
+       article {
+        display: grid;
+        grid-template-columns: 10fr 2fr;
+       }
+       .subscribe-card {
+        margin-top: 10px;
+       }
+       .categories {
+        text-transform : uppercase;
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 10px;
+
+       }
+       .categories :hover {
+        color: black;
+        cursor: pointer;
+       }
+       .video-heading {
+        font-weight: bold;
+       }
+       .bi-play-fill {
+        padding-left: 10px;
+        padding-right: 10px;
+       }
+       .play-buttons {
+        margin-top: 30px;
+        margin-bottom:20px;
+       }
+       .thumbnails {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+        grid-gap: 5px;
+       }
+       iframe {
+        width: 230px;
+        height: 150px;
+        border-radius: 15px;
+       }
+       .card {
+        margin-left: 50px;
+        margin-right: 50px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="youtube-card">
+            <span class="bi bi-justify"></span>
+            <span>
+                <img src="./public/images/you.jpg">
+            </span>
+        </div>
+        <div class="search-area">
+            <div class="search-bar">
+                <span>Search</span>
+                <span class="bi bi-search"></span>
+            </div>
+            <div class="mic">
+                <span class="bi bi-mic-fill"></span>
+            </div>
+        </div>
+        <div class="icons-card">
+            <span class="bi bi-camera-video-off"></span>
+            <span class="bi bi-bell"><sup>9+</sup></span>
+            <span class="mail">aa</span>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div>
+                <a href=""><span class="bi bi-house-door"><span class="space-left">Home</span></a>
+            </div>
+            <div>
+                <a href=""><span class="bi bi-camera-reels"><span class="space-left">Shorts</span></a>
+            </div>
+            <div>
+                <a href=""><span class="bi bi-collection-play"><span class="space-left">Subscribes</span></a>
+            </div>
+            <hr>
+            <div>
+                <a href=""><span class="bi bi-collection"><span class="space-left">Library</span></a>
+            </div>
+            <div>
+                <a href=""><span class="bi bi-clock-history"><span class="space-left">History</span></a>
+            </div>
+            <div>
+                <a href=""><span class="bi bi-play-btn"><span class="space-left">Your videos</span></a>
+            </div>
+            <div>
+                <a href=""><span class="bi bi-hand-thumbs-up"><span class="space-left">Liked Videos</span></a>
+            </div>
+        </nav>
+        <main>
+            <div>
+                <img src="./public/images/nareshit-banner.JPG" width="100%">
+            </div>
+            <div class="card">
+                <article>
+                    <div>
+                        <img src="./public/images/nareshit-logo.JPG" align="left">
+                        <h2>Naresh i Technologies</h2>
+                        <div class="sub-title">@NareshIT <span class="subscriber">1.19M subscribers 2.8K videos</span></div>
+                        <p class="content">We are one of the India's largest software training organization and an Top ...></p>
+                        <div><a href="instagram.com/nareshitech">instagram.com/nareshitech </a> and 7 more links</div>
+                    </div>
+                    <div class="subscribe-card">
+                        <span class="bi bi-bell"></span>
+                        <span>Subscribe</span>
+                        <span class="bi bi-chevron-down"></span>
+
+                    </div>
+                </article>
+                <div class="categories">
+                    <span>Home</span>
+                    <span>Video</span>
+                    <span>short</span>
+                    <span>live</span>
+                    <span>Playlist</span>
+                    <span>channels</span>
+                    <span>about</span>
+                    <span class="bi bi-chevron-right"></span>
+                </div>
+                <div class="play-buttons">
+                    <span class="video-heading">Videos</span>
+                    <span class="bi bi-play-fill"></span>
+                    <span class="video-heading">Play all</span>
+                </div>
+                <div class="thumbnails">
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/Ft-v5aLDWqc"></iframe>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/DeEszXEewHs"></iframe>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/f5doC5v3Xd8"></iframe>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/X7RNpVTemHo"></iframe>
+                    </div>
+                    <div>
+                        <iframe src="https://www.youtube.com/embed/tvrNm901RK8"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
