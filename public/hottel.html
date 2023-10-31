@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body {
+            height:100vh;
+        }
+        .nav-item {
+            font-size:14px;
+        }
+        .bg-container {
+            background-image:url("../public/images/food-banner.jpeg");
+            width:100%;
+            background-size:cover;
+            height:700px;
+        }
+        .bg-container button {
+            font-size:12px;
+            font-weight:bold;
+        }
+        .order-now {
+            background-color:transparent;
+            
+        }
+        .food-card-align {
+            padding:10px;
+            text-align:center;
+            border-radius:10px;
+            text-align:center;
+            background-color:white;
+            margin-bottom:10px;
+        }
+        .food-card-align p {
+            color:gray;
+        }
+        .menu-card {
+                background-color:white;
+                border-radius:20px;
+                padding:30px;
+        }
+        .menu-images {
+            border-radius:15px;
+            width:100%;
+        }
+        .gold-link {
+                color:goldenrod;
+                text-decoration:none;
+        }
+        .watch-btn {
+                background-color:goldenrod;
+                color:white;
+                padding:10px;
+                border:none;
+                border-radius:10px;
+                width:120px;
+        }
+        .fresh-card {
+            background-color: rgba(80, 129, 172, 0.055);
+        }
+       
+        .surprise-card {
+            background-color:#d0b2001a;
+        }
+        aside span {
+                display:inline-block;
+                border-radius:90px;
+                width:90px;
+                height:90px;
+                padding-top:20px;
+                font-size:30px;
+                background-color:#d0b2001a;
+                color:goldenrod;
+        }
+        footer {
+                background-color:#0d2436;
+                color:white;
+                height:300px;
+            }
+        
+        @media screen and (orientation:landscape) {
+            section {
+                display:grid;
+                grid-template-columns:3fr 3fr 3fr 3fr;
+            }
+            main {
+                grid-row:1;
+                grid-column:1/5;
+            }
+            .bg-wcs {
+                grid-row:2;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns:3fr 3fr 3fr 3fr;
+                background-color:rgba(240, 248, 255, 0.563);
+            }
+            .wcs {
+                grid-row:1;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns:3fr 3fr 3fr 3fr;
+                
+            }
+            .wcs-row {
+                grid-row: 1;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns:3fr 3fr 3fr 3fr;
+            }
+            .wcs-content {
+                grid-row:1;
+                grid-column:1/5;
+            }
+            .food-cards {
+                grid-row:2;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns:4fr 4fr 4fr;
+                grid-gap:20px;
+            }
+            .food-card-1 {
+                grid-row:1;
+                grid-column:1/2;
+                
+            }
+            .food-card-2 {
+                grid-row:1;
+                grid-column:2/3;
+                padding:10px;
+                text-align:center;
+                border-radius:10px;
+                text-align:center;
+                background-color:white;
+            }
+            .food-card-3 {
+                grid-row:1;
+                grid-column:3/5;
+                padding:10px;
+                text-align:center;
+                border-radius:10px;
+                text-align:center;
+                background-color:white;
+            }
+            .food-cards h6 {
+                font-size:20px;
+                padding-top:20px;
+                
+            }
+            /*.food-cards p,.wcs-content p {
+                font-size:14px;
+                color:gray;
+            }*/
+            .menu-images {
+                height:230px;
+            }
+            .explore-menu-card {
+                grid-row:3;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 3fr 3fr 3fr 3fr;
+            }
+            .explore-heading {
+                grid-row:1;
+                grid-column:1/5;
+            }
+            .menu-cards {
+                grid-row:2;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 3fr 3fr 3fr 3fr;
+                grid-gap:20px;
+
+            }
+            .menu-card {
+                height:350px;
+            }
+            
+            .fresh-card {
+                grid-row:4;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 12fr;
+                height:400px;
+            }
+            .image-properties {
+                height:200px;
+                width:250px;
+                border-radius:250px;
+                padding-left:30px;
+                
+            }
+            .healthy-food {
+                grid-row:1;
+                grid-template-columns: 1/2;
+                display:grid;
+                grid-template-columns: 2fr 10fr;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .fresh-content-card {
+                padding-left:80px;
+                width:700px;
+                
+            }
+            .delivery-payment-card {
+                grid-row:5;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 12fr;
+                height:300px;
+
+            }
+            .payment-card {
+                grid-row:1;
+                grid-template-columns: 1/2;
+                display:grid;
+                grid-template-columns: 10fr 2fr;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .payment-content {
+                width:700px;
+            }
+            .none-card {
+                display:none;
+            }
+            .offer-image {
+                width:300px;
+                height:300px;
+                padding-right:30px;
+
+            }
+            .surprise-card {
+                grid-row:6;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 12fr;
+                height:400px;
+                background-color:#d0b2001a;
+            }
+            .gift-image {
+                width:250px;
+                height:300px;
+            }
+            .thanking-card {
+                grid-row:1;
+                grid-template-columns: 1/2;
+                display:grid;
+                grid-template-columns: 10fr 2fr;
+                display:flex;
+                justify-content: center;
+                align-items:center;
+            }
+            .follow-us-card {
+                grid-row:7;
+                grid-column:1/5;
+                display:grid;
+                grid-template-columns: 12fr;
+                height:220px;
+            }
+            .follow-card {
+                grid-row:1;
+                grid-template-columns: 1/2;
+                display:grid;
+                grid-template-columns: 12fr;
+            }
+            .follow-heading {
+                grid-row:1;
+                grid-column:1/2;
+            }
+            .follow-nav {
+                grid-row:2;
+                grid-column:1/2;
+            }
+            
+            .none-gift-btn {
+                display:none;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            .menu-card {
+                height:600px;
+                margin-bottom:15px;
+            }
+            .menu-images {
+                height:450px;
+            }
+            .fresh-image {
+                display:grid;
+                grid-template-columns: 12fr;
+                margin-bottom:15px;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                
+            }
+            .image-properties {
+                height:150px;
+                width:150px;
+                border-radius:100px;
+                
+            }
+            .fresh-content-card {
+                display:grid;
+                grid-template-columns: 12fr;
+            }
+            .fresh-card {
+                height:420px;
+            }
+            .offer-image {
+                display:grid;
+                grid-template-columns: 12fr;
+                margin-bottom:15px;
+                display:flex;
+                align-items:center;
+                justify-content: center;
+                width:200px;
+            }
+            .offer-card {
+                display:none;
+            }
+            .none-card {
+                display:block;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-top:15px;
+            }
+            .delivery-payment-card {
+                padding-bottom:50px;
+            }
+            .none-btn {
+                display:none;
+            }
+            .surprise-card {
+                padding-top:60px;
+                height:550px;
+            }
+            .gift-image {
+                width:250px;
+                height:300px;
+                margin-bottom:20px;
+            }
+            .follow-us-card {
+                height:200px;
+                margin-top:50px;
+                margin-bottom:25px;
+            }
+            .follow-heading {
+                padding-top:15px;
+            }
+            
+        }
+    </style>
+
+</head>
+<body class="pb-3">
+    <header class="p-3">
+        <nav class="navbar navbar-expand-lg bg-white" data-bs-theme="light">
+            <div class="container-fluid">
+                <img src="../public/images/food-munch-logo.JPG" style="width:100px; height:60px;" class="navbar-brand ps-5">
+                <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="menu">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item"><a href="#" class="nav-link">Why Choose Us?</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Explore Menu</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Delivery & Payment</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Follow Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <main>
+            <div class="bg-container text-center text-white d-flex justify-content-center align-items-center">
+                <div>
+                    <h2>Get Delicious Food Anything</h3>
+                    <p>Eat Smart & Healthy</p>
+                    <button class="view-more btn btn-warning text-white me-2">View Menu</button>
+                    <button class="btn border-warning text-warning order-now">Order Now</button>
+                </div>
+            </div>
+        </main>
+        <div class="bg-wcs pb-5">
+            <div class="container wcs">
+                <div class="wcs-row mt-5">
+                     <div class="wcs-content">
+                         <h3>Why Choose Us?</h3>
+                         <p>We use both original recipes and classic versions of famous food items.</p>
+                     </div>
+                     <div class="food-cards">
+                         <div class="food-card-1 food-card-align border shadow">
+                             <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-serve.png">
+                             <h6>Best Offers</h6>
+                             <p>Experience fine dining at the comfort of your home. All our orders are carefully packed and arranged to give you the nothing less than perfect.</p>
+                         </div>
+                         <div class="food-card-2 food-card-align border shadow">
+                             <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/fruits-img.png">
+                             <h6>Fresh Food</h6>
+                             <p>The Fresh Food group provides fresh-cut fruits and vegetables directly picked from our partner farms and farm houses so that you always get them tree to plate</p>
+                         </div>
+                         <div class="food-card-3 food-card-align border shadow">
+                             <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/offers-img.png">
+                             <h6>Best Offers</h6>
+                             <p>Food Coupons & Offers upto 50% OFF and Exclusive Promo Codes on All Online Food Orders.</p>
+                         </div>
+                     </div>
+                </div>
+             </div>
+        </div>
+        <div class="explore-menu-card mt-5">
+            <div class="menu-cards container">
+                <h3 class="explore-heading">Explore Menu</h3>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/non-veg-starter.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/veg-starter.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/soup.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/fish-sea-food.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/main-course.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/noodles.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/salad.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+                <div class="menu-card shadow border">
+                    <img src="../public/images/desserts.jpeg" class="menu-images">
+                    <h6 class="mt-4">Non-Veg Starters</h6>
+                    <a href="#" class="gold-link">View All <span class="bi bi-arrow-right-short"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="fresh-card mt-5">
+            <div class="container healthy-food p-3">
+                <div class="fresh-image">
+                    <img src="../public/images/healthy-order.jpeg" class="image-properties">
+                </div>
+                <div class="fresh-content-card">
+                    <h2>Fresh, Healthy, Organic, Delicious Fruits</h2>
+                    <p>Say no to harmful chemicals and go fully organic with our range of fresh fruits and veggies. Pamper your body and your senses with the true and unadulterated gifts from mother nature. with the true and unadulterated gifts from mother nature.</p>
+                    <button class="watch-btn" data-bs-target="#watchVideo" data-bs-toggle="modal">Watch Video</button>
+                </div>
+                <div class="modal" id="watchVideo">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content" style="width:350px;">
+                            <div class="modal-header">
+                                <iframe src="https://www.youtube.com/embed/kRCH8kD1GD0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-payment-card">
+            <div class="container payment-card">
+                <div class="none-card">
+                    <img src="../public/images/offer.jpg" class="offer-image">
+                </div>
+                <div class="payment-content">
+                    <h2>Delivery and Payment</h2>
+                    <p>Enjoy hassle-free payment with the plenitude of payment options available for you. Get live tracking and locate your food on a live map. It's quite a sight to see your food arrive to your door. Plus, you get a 5% discount on every order every time you pay online.</p>
+                    <button class="watch-btn">Order Now</button>
+                </div>
+                <div class="offer-card">
+                    <img src="../public/images/offer.jpg" class="offer-image">
+                </div>
+            </div>
+        </div>
+        <div class="surprise-card">
+            <div class="container thanking-card">
+                <div class="payment-content">
+                    <h4>Thank you for being a valuable customer to us.</h4>
+                    <p>We have a surprise gift for you</p>
+                    <button class="watch-btn none-btn">Redeem Gift</button>
+                </div>
+                <div class="gift-image-card">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="gift-image">
+                </div>
+                <div class="none-gift-btn">
+                    <button class="watch-btn">Redeem Gift</button>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us-card">
+            <div class="text-center d-flex justify-content-center align-items-center">
+                <div>
+                    <h2 class="follow-heading">Follow Us</h2>
+                    <aside class="mt-4">
+                        <span class="bi bi-instagram me-2"></span>
+                        <span class="bi bi-twitter me-2" ></span>
+                        <span class="bi bi-linkedin"></span>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <img src="../public/images/food-munch-logo.JPG" style="width:100px; height:80px;">
+            <p class="mt-3">orderfood@foodmunch.com</p>
+            <p>123 Ayur Vigyan Nagar, New Delhi, India.</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
